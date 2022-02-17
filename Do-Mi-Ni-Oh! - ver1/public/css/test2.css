@@ -24,96 +24,199 @@ body{
     padding-left: 3%;
 }
 
-.return{
-    position:absolute;
-    top: 22px;
-    right:100px;
+a.btn--circle {
     float: right;
-    width: 200px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  }
+  
+  a.btn--circle i {
+    color:black;
+    font-size: 150%;
+    line-height: 40px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    letter-spacing: 0;
+  }
+
+  a.btn--circle-c:hover i {
+    line-height: 30px;
+  }
+
+  a.btn--circle-d:hover i {
+    transform: translate(-4px,0);
+  }
+
+.left{
+    position:absolute;
+    right: 60px;
 }
 
 .btn {
     font-size: 30px;
-    display: inline-block;
     opacity: 0.8;
     border-radius: 15px;
     text-align: center;
     cursor:pointer;
     background-color:antiquewhite;
+    width: 250px;
+    display: inline-block;   
+}
+
+.btn:hover{
+    background-color:silver;
 }
 
 .container{
+     position: absolute;
+     top: 10px;
      width: 800px;
      height: 600px;
      font-size: 50px;
      margin-top: 100px;
      margin-left: 120px;
 }
-/*ここらへん直したい、absoluteで全部位置指定してんの馬鹿らしい*/
-.up{
-    position: absolute;
-    top: 120px;
-    left: 270px;
-    font-size: 40px;
-    margin-top:140px;
-    width: 450px;
+
+.hidden_box {
+    margin: 1em 0;
+    padding: 0;
 }
-.down{
-    position: absolute;
-    top: 250px;
-    left: 270px;
-    font-size: 40px;
-    margin-top:100px;
+
+.hidden_box label {
     width: 450px;
+    font-size: 30px;
+    opacity: 0.8;
+    padding: 15px 50px;
+    background: antiquewhite;
+    border-radius: 5px;
+    cursor :pointer;
+    transition: .5s;
+    margin-top: 80px;
+    
+    border-color: black;
+    display: inline-block;
 }
+
+.hidden_box label:before {
+    display: inline-block;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+    transition: 0.2s;
+}
+
+.hidden_box label:hover {
+    background: silver;
+}
+
+.hidden_box input:checked + label:before {
+     content: '\f00d';
+     -ms-transform: rotate(360deg);
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+     color: #668ad8;
+}
+
+.hidden_box input {
+    display: none;
+}
+
+.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.hidden_box input:checked + label + .hidden_show {
+    padding: 5px 0;
+    height: auto;
+    opacity: 1;
+}
+
+.hide{
+    float:left;
+    margin-left: 150px;
+}
+
+
 .rank{
+    border-radius: 15px;
+    padding: 15px 50px;
+    font-size:30px;
     opacity: 0.3;
+    width:450px;
+    background-color:antiquewhite;
+    display: inline-block;
+
 }
 
 .text{
-    position: absolute;
-    top: 380px;
-    left: 400px;
+    margin-top:15px
 }
 
 p{
      font-size: 30px;
 }
 
-
-.pagetitle{
+h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  h1:before {
+    content: '';
     position: absolute;
-    top:100px;
-    left:280px;
+    bottom: -15px;
+    display: inline-block;
+    width: 220px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 2px;
+  }
+  
+.pagetitle{
+    margin: 70px 250px 0 40px;
     font-size:70px;
     text-align:center;
 }
 
-
 .room{
-    position: absolute;
-    left:500px;
+    float:left;
+    margin-top: 50px;
 }
-
 
 .white{
+    margin: 50px 0 0 0px; 
     font-size:30px;
     height: 36px;
-    width: 300px;
+    width: 350px;
 }
 .black{
+    margin: 50px 0 0 100px; 
     font-size: 30px;
     color:white;
     background-color:black;
     height:42px;
-    width: 230px;
+    width: 260px;
+}
+
+.player{
+    float:left;
+    margin-top: 30px;
 }
 
 .make{
-    position: absolute;
-    bottom: 200px;
-    left: 280px;
+    margin-top: 70px;
     height: 50px;
     width: 500px;
 }
@@ -133,16 +236,13 @@ p{
     overflow-y: scroll;         
   }
 .area{
-    width: 300px;
+    width: 350px;
     font-size: 28px;
-    position:absolute;
     background-color:white;
 }
 
 .wait{
-    position:absolute;
-    left: 220px;
-    top: 70px;
+    margin:80px 150px 0 0px;
     -webkit-animation: blink 1s ease infinite;
 	animation: blink 2s ease infinite;
 }
@@ -157,46 +257,46 @@ p{
 }
 
 .lists{
-    font-size:25px;
-    position: absolute;
-    left:240px;
-    bottom: 160px;
+    margin: 40px 100px 0 105px;
     height: 180px;
     width: 600px;
+    font-size: 20px;
+    background-color:rgba(255, 255, 255, 0.2);
 }
+
 .list1{
     width: 200px;
-    position: absolute;
-    top:40px;
-    left:100px;
     background-color:rgba(105, 86, 86, 0.575);
+    position: absolute;
+    left: 180px;
+    bottom: 240px;
 }
 .list2{
     width: 200px;
-    position: absolute;
-    top: 40px;
-    left: 320px;
     background-color:rgba(105, 86, 86, 0.575);
+    position: absolute;
+    left: 400px;
+    bottom: 240px;
 }
 .list3{
     width: 200px;
-    position: absolute;
-    top: 100px;
-    left:100px;
     background-color:rgba(105, 86, 86, 0.575);
+    position: absolute;
+    left: 180px;
+    bottom: 180px;
 }
+
 .list4{
     width: 200px;
-    position: absolute;
-    top: 100px;
-    left: 320px;
     background-color:rgba(105, 86, 86, 0.575);
+    position: absolute;
+    left: 400px;
+    bottom: 180px;
 }
 
 .start{
-    position: absolute;
-    left:440px;
-    bottom:100px;
+    background-color:black;
     height:50px;
     width:200px;
+    color:white;
 }

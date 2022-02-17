@@ -6,10 +6,6 @@ body{
     font-family: cambria;
 }
 
-p{
-    margin:0;
-}
-
 .wrapper{
     margin:10px 400px 0 400px;
     width:1080px;
@@ -33,7 +29,6 @@ p{
 
 input{
     width: 400px;
-    margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     font-size: 20px;

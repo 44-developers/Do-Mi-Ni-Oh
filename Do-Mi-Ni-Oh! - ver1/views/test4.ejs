@@ -9,13 +9,16 @@
     <div class="wrapper">
         <img src="images/logo.png" class="logo">
         <button class="btn return" onclick="location.href='/'">Return</button>
-        <h1 class="pagetitle">Room making</h1>
+        <h1 class="pagetitle join">Join Room</h1>
         <div class="container">
-            <div class="up black">Room Name</div>
-            <input type="text" class="room up white">
-            <div class="down black">Max Players</div>
-            <input type="number" value="1" min="1" max="4" step="1" class="room down white">
-            <button class="btn make"  onclick="location.href='/test6'">Make Room</button>
+         <!--ここら辺何とかしてほしい、最終的にはデータベースからルーム名とか引っ張ってくるとは思うけど-->
+            <div class="box">
+                <div>
+                    <div class="black ">データベースから持ってくる</div>
+                    <div class="white bo">player数</div>
+                    <button class="btn bo">Join</button>
+                </div>
+              </div>
         </div>
 
     </div>

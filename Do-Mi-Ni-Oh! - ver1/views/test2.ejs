@@ -2,16 +2,28 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/test2.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <meta charset="utf-8">
     <title>Do-Mi-Ni-Oh!</title>
   </head>
   <body>
     <div class="wrapper">
         <img src="images/logo.png" class="logo">
-        <button class="btn return" onclick="location.href='/'">Return</button>
+        <a href="/" class="btn btn--circle btn--circle-d btn--shadow left"><i class="fas fa-arrow-left"></i></a>
         <div class="container">
-          <button class="up btn" onclick="location.href='/test3'">Free Match</button>
-          <button class="rank down btn ">Rank Match</button>
+          <div class="hidden_box">
+            <input type="checkbox" id="label1" />
+            <label for="label1" class="btn">Free Match</label>
+            <div class="hidden_show">
+              <div class="hide">
+                <span class="btn hob" onclick="location.href='/test3'">Make Room</span>
+                <span class="btn hob" onclick="location.href='/test4'">Join Room</span>
+              </div>
+            </div>
+          </div>
+          
+          <span class="rank light">Rank Match</span>
           <p class="text">Coming soon…</p>
         </div>
     </div>
