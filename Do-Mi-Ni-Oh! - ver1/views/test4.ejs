@@ -2,21 +2,24 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/test2.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Do-Mi-Ni-Oh!</title>
   </head>
   <body>
     <div class="wrapper">
         <img src="images/logo.png" class="logo">
-        <button class="btn return" onclick="location.href='/'">Return</button>
+        <a href="/test2" class="btn btn--circle btn--circle-d btn--shadow left"><i class="fas fa-arrow-left"></i></a>
+        <a href="/" class="btn btn--circle btn--circle-c btn--shadow "><i class="fas fa-arrow-up"></i></a>
         <h1 class="pagetitle join">Join Room</h1>
         <div class="container">
-         <!--ここら辺何とかしてほしい、最終的にはデータベースからルーム名とか引っ張ってくるとは思うけど-->
             <div class="box">
-                <div>
-                    <div class="black ">データベースから持ってくる</div>
-                    <div class="white bo">player数</div>
-                    <button class="btn bo">Join</button>
+                <div class="set">
+                  <div class="match">
+                      <div class="black match">データベース</div>
+                      <div class="match pl">player数</div>
+                  </div>
+                  <div class="gray">Join</div>
                 </div>
               </div>
         </div>
